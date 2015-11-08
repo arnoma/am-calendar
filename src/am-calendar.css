@@ -56,8 +56,9 @@
 }
 .am-td-active > a, .am-cal-modal-time-body-table td > a:hover{
     background-color: #1EB6E1;
-    color: white;
+    color: white !important;
     border-radius: 2px;
+    text-decoration: none;
 
     /*-webkit-transition: 500ms;*/
     /*-moz-transition: 500ms;*/
@@ -93,8 +94,9 @@
     text-align: center;
 }
 .am-li-active > a{
+    text-decoration: none;
     background-color: #1EB6E1;
-    color: white;
+    color: white !important;
     display: inline-block;
     border-radius: 2px;
     padding: 1px;
