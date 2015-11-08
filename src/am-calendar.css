@@ -9,6 +9,9 @@
     display:block;
     color: rgba(0,0,0,0.87);
 }
+.am-cal-wrapper a:hover{
+    text-decoration: none;
+}
 .am-cal-wrapper ul{
     list-style: none;
     margin: 0;
@@ -18,6 +21,7 @@
     outline: none;
 }
 .am-cal-modal{
+    z-index: 2;
     position: absolute;
     background-color: white;
     top:0;
@@ -55,11 +59,11 @@
     color: white;
     border-radius: 2px;
 
-    -webkit-transition: 500ms;
-    -moz-transition: 500ms;
-    -ms-transition: 500ms;
-    -o-transition: 500ms;
-    transition: 500ms;
+    /*-webkit-transition: 500ms;*/
+    /*-moz-transition: 500ms;*/
+    /*-ms-transition: 500ms;*/
+    /*-o-transition: 500ms;*/
+    /*transition: 500ms;*/
 
 }
 .am-calendar-ul{
@@ -96,11 +100,11 @@
     padding: 1px;
     line-height: normal;
 
-    -webkit-transition:  500ms;
-    -moz-transition:  500ms;
-    -ms-transition:  500ms;
-    -o-transition:  500ms;
-    transition:  500ms;
+    /*-webkit-transition:  500ms;*/
+    /*-moz-transition:  500ms;*/
+    /*-ms-transition:  500ms;*/
+    /*-o-transition:  500ms;*/
+    /*transition:  500ms;*/
 }
 .am-year-month-title{
     padding:0 5px;
