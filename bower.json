@@ -5,6 +5,7 @@
   ],
   "description": "angular calendar plugin",
   "main": [
+    "./src/date.js",
     "./src/am-calendar.js",
     "./src/am-calendar.css"
   ],
