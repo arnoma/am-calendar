@@ -143,7 +143,7 @@
         var template = '\
     <div class="am-cal-modal-time">\
     <div class="am-cal-modal-time-header">\
-    <a href="" style="float: left;" ng-click="prev()">\
+    <a href="" style="float: left;outline: none;" ng-click="prev()">\
     <svg style="width:24px;height:24px" viewBox="0 0 24 24">\
        <path fill="#000000" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />\
       </svg>\
@@ -152,7 +152,7 @@
     <span>{{currentMonth}} /</span>\
     <span>{{currentYear}}</span>\
     </div>\
-    <a href="" style="float: right;" ng-click="next()">\
+    <a href="" style="float: right;outline: none;" ng-click="next()">\
         <svg style="width:24px;height:24px" viewBox="0 0 24 24">\
       <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />\
       </svg>\
