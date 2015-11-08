@@ -396,6 +396,11 @@
             }
 
             var initTansY = currentHour * itemH;
+
+            //修复Bug
+            if( (count - currentHour) * itemH <= 110 ){
+              initTansY = count * itemH - 110;
+            }
             ulElem.css({
               'transform':'translate(0,-'+ initTansY +'px)'
             });
@@ -487,6 +492,10 @@
             }
 
             var initTansY = currentMinute * itemH;
+            //修复Bug
+            if( (count - currentMinute) * itemH <= 110 ){
+              initTansY = count * itemH - 110;
+            }
             ulElem.css({
               'transform':'translate(0,-'+ initTansY +'px)'
             });
