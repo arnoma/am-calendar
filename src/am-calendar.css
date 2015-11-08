@@ -1,0 +1,110 @@
+.am-cal-wrapper{
+    font-family: Roboto,'Helvetica Neue',sans-serif;
+    position: relative;
+    font-size: 12px;
+    color: rgba(0,0,0,0.87);
+}
+.am-cal-wrapper a{
+    text-decoration: none;
+    display:block;
+    color: rgba(0,0,0,0.87);
+}
+.am-cal-wrapper ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.am-cal-input{
+    outline: none;
+}
+.am-cal-modal{
+    position: absolute;
+    background-color: white;
+    top:0;
+    left:0;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 9px 12px -6px rgba(0,0,0,.2),0 19px 29px 2px rgba(0,0,0,.14),0 7px 36px 6px rgba(0,0,0,.12);
+    -moz-box-shadow: 0 9px 12px -6px rgba(0,0,0,.2),0 19px 29px 2px rgba(0,0,0,.14),0 7px 36px 6px rgba(0,0,0,.12);
+    box-shadow: 0 9px 12px -6px rgba(0,0,0,.2),0 19px 29px 2px rgba(0,0,0,.14),0 7px 36px 6px rgba(0,0,0,.12);
+    padding: 10px;
+}
+.am-cal-modal-time{
+    height: 100%;
+    display:inline-block;
+}
+.am-cal-modal-time-header{
+    font-size: 14px;
+    padding: 3px 5px;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+}
+.am-cal-modal-time-body-table{
+    width: 100%;
+    padding: 5px;
+}
+.am-cal-modal-time-body-table th,.am-cal-modal-time-body-table td{
+    text-align: center;
+    padding: 3px 5px;
+}
+.am-cal-modal-time-body-table td{
+    cursor: pointer;
+}
+.am-td-active > a, .am-cal-modal-time-body-table td > a:hover{
+    background-color: #1EB6E1;
+    color: white;
+    border-radius: 2px;
+
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+
+}
+.am-calendar-ul{
+    position: absolute;
+    list-style: none;
+    width: 100%;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+}
+.am-hm-title{
+    padding: 3px 5px;
+    font-weight: bold;
+    padding-top: 8px;
+}
+.am-ul-wrapper{
+    overflow: hidden;
+}
+.am-calendar-ul{
+    transform: translate(0,0);
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+.am-calendar-li{
+    text-align: center;
+}
+.am-li-active > a{
+    background-color: #1EB6E1;
+    color: white;
+    display: inline-block;
+    border-radius: 2px;
+    padding: 1px;
+    line-height: normal;
+
+    -webkit-transition:  500ms;
+    -moz-transition:  500ms;
+    -ms-transition:  500ms;
+    -o-transition:  500ms;
+    transition:  500ms;
+}
+.am-year-month-title{
+    padding:0 5px;
+    border-radius: 2px;
+    background-color: #1EB6E1;
+    color: white;
+}

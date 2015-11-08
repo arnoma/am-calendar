@@ -1,0 +1,30 @@
+{
+  "name": "am-calendar",
+  "authors": [
+    "Arno <arnoma2015@gmail.com>"
+  ],
+  "description": "angular calendar plugin",
+  "main": [
+    "./src/am-calendar.js",
+    "./src/am-calendar.css"
+  ],
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "calendar",
+    "datepicker"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "jquery": "~2.1.4"
+  }
+}
