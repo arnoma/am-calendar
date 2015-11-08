@@ -25,7 +25,8 @@
           scope:{
             ngModel:'=',
             format:'@',
-            inputClass:'@'
+            inputClass:'@',
+            dateModalPosition:'@'
           },
           template:template,
           replace:true,
@@ -38,7 +39,9 @@
                 minute;
 
             this.inputHeight = function(){
-              return $element.find('.am-cal-input')[0].offsetHeight;
+              if($scope.dateModalPosition){
+                return $scope.dateModalPosition;
+              }
             };
             this.setYearMonthDay = function(y,m,d){
 
@@ -121,8 +124,11 @@
           replace:true,
           require:'^amCalendar',
           link: function (scope, element, attrs,amCalendarController) {
+
+            var position = amCalendarController.inputHeight().split('-');
             element.css({
-              top:amCalendarController.inputHeight() + 3 + 'px'
+              top:position[0] + 'px',
+              left:position[1] + 'px'
             });
 
             element.bind('click',function(){
