@@ -195,7 +195,7 @@
                 dm = today.toString('M-d').split('-'),
                 month = dm[0],
                 day = dm[1],
-                daysOfMonthAndYear = Date.getDaysInMonth(year,month),
+                daysOfMonthAndYear = Date.getDaysInMonth(year,month-1),
                 tableBodyElem = element.find('.am-cal-table-body'),
                 selectedTdElem;
             scope.currentYear = year;
@@ -244,9 +244,9 @@
               var m = time.toString('M'),
                   y = time.toString('yyyy');
               if(m === month && y === year){
-                drawDaysUi(y,m,Date.getDaysInMonth(y,m),day);
+                drawDaysUi(y,m,Date.getDaysInMonth(y,m-1),day);
               } else {
-                drawDaysUi(y,m,Date.getDaysInMonth(y,m));
+                drawDaysUi(y,m,Date.getDaysInMonth(y,m-1));
               }
             }
 
