@@ -408,6 +408,8 @@
 
 
             ulElem.bind('wheel',wheelHour);
+            ulElem.bind('touchmove',wheelHour);
+
             ulElem.bind('click',selectHour);
 
 
@@ -415,8 +417,10 @@
             var transY = 0;
             function wheelHour(e){
 
+              e.stopImmediatePropagation();
+
               var oldTransY = getTransXAndY(getMatrix(ulElem)).transY;
-              transY = e.originalEvent.deltaY*0.215;
+              transY = caculateTransY(e.originalEvent);
               var newTransY = oldTransY - transY;
 
               if(newTransY >= 0){
@@ -429,6 +433,25 @@
               });
               return false;
             }
+
+            var oldLayer;
+            function caculateTransY(event){
+              var transY;
+              if(angular.isDefined(event.deltaY)){
+                return event.deltaY*0.215
+              } else {
+                if(oldLayer){
+                  if(oldLayer > event.layerY){
+                    transY = 6;
+                  } else {
+                    transY = -6;
+                  }
+                }
+                oldLayer = event.layerY;
+                return  transY;
+              }
+            }
+
 
 
             function selectHour(ev){
@@ -504,16 +527,19 @@
 
             ulElem.bind('wheel',wheelMinute);
             ulElem.bind('click',selectMinute);
-
+            ulElem.bind('touchmove',wheelMinute);
 
 
             var transY = 0;
             function wheelMinute(e){
 
-              var oldTransY = getTransXAndY(getMatrix(ulElem)).transY;
-              transY = e.originalEvent.deltaY*0.215;
-              var newTransY = oldTransY - transY;
 
+              e.stopImmediatePropagation();
+
+              var oldTransY = getTransXAndY(getMatrix(ulElem)).transY;
+
+              transY = caculateTransY(e.originalEvent);
+              var newTransY = oldTransY - transY;
               if(newTransY >= 0){
                 newTransY = 0;
               } else if( -newTransY >= (itemH*count - 110)){
@@ -523,6 +549,25 @@
                 'transform':'translate(0,' + newTransY +'px)'
               });
               return false;
+            }
+
+
+            var oldLayer;
+            function caculateTransY(event){
+              var transY;
+              if(angular.isDefined(event.deltaY)){
+                return event.deltaY*0.215
+              } else {
+                if(oldLayer){
+                  if(oldLayer > event.layerY){
+                    transY = 6;
+                  } else {
+                    transY = -6;
+                  }
+                }
+                oldLayer = event.layerY;
+                return  transY;
+              }
             }
 
 
